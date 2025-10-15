@@ -95,6 +95,79 @@
 
 </section>
 
+<section class="image-of-the-day">
+  <div class="image-day-content">
+    <div class="text-content">
+      <h2 class="section-title">Image Of The Day</h2>
+      <h3 class="image-title">Earth’s Crest Over the Lunar Horizon</h3>
+
+      <p class="description">
+        This view of the Earth’s crest over the lunar horizon was taken on July 29,
+        1971, during the <a href="#">Apollo 15</a> lunar landing mission. Astronauts
+        David Scott, Alfred Worden, and James Irwin <a href="#">launched</a> from
+        NASA’s Kennedy Space Center in Florida aboard a Saturn V launch vehicle.
+      </p>
+
+      <p class="description">
+        Designed to explore the Moon over longer periods, greater ranges, and with more
+        instruments for the collection of scientific data than before, Apollo 15 included
+        the introduction of a $40 million lunar roving vehicle (LRV) that reached a top
+        speed of 10 mph (16 kph) across the Moon’s surface.
+      </p>
+
+      <p class="credit">Image Credit: NASA</p>
+
+      <button class="read-more">Read More ></button>
+    </div>
+
+    <div class="image-section">
+      <img src="images/image-of-the-day.png" alt="Space Image" class="space-image" />
+      <a href="#" class="view-image">View Image <span>➜</span></a>
+    </div>
+  </div>
+</section>
+
+
+<div class="slider-section">
+    <button class="nav-arrow prev">&#10094;</button>
+
+    <div class="slide active">
+      <img src="images/ai-astronomy.png" alt="AI in Astronomy">
+      <div class="slide-content">
+        <h2>AI and ML in Astronomy</h2>
+        <p>AI is used to analyze vast amounts of data from space missions, speeding up discoveries like exoplanets and new cosmic phenomena.</p>
+        <button>Learn More &gt;</button>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/quantum-astronomy.png" alt="Quantum Astronomy">
+      <div class="slide-content">
+        <h2>Quantum Astronomy</h2>
+        <p>Using quantum sensors to detect faint cosmic signals that traditional instruments miss, offering more precise space observations.</p>
+        <button>Learn More &gt;</button>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/jws-telescope.png" alt="JWS Telescope">
+      <div class="slide-content">
+        <h2>JWS Telescope</h2>
+        <p>A powerful space telescope that captures detailed infrared images of distant galaxies, stars, and exoplanets, revealing previously unseen details.</p>
+        <button>Learn More &gt;</button>
+      </div>
+    </div>
+
+    <button class="nav-arrow next">&#10095;</button>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+
 
 
     <footer class="footer">
@@ -150,6 +223,38 @@
     </footer>
 
     <script>
+
+        const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    prev.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    next.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        current = i;
+        showSlide(current);
+      });
+    });
         // Add active class to clicked nav link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {

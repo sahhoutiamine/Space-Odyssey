@@ -308,6 +308,7 @@
   gap: 80px;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  margin-top: -50px;
 }
 
 .card {
@@ -520,5 +521,200 @@
     transform: translateY(-3px);
 }
 
+.image-of-the-day {
+  padding: 60px 10%;
+  margin-top: -75px;
+  font-family: "Georgia", serif;
+  color: #000;
+}
+
+.image-day-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.image-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #001c4b;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.description {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.description a {
+  color: #001c4b;
+  text-decoration: underline;
+}
+
+.credit {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.read-more {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: 1.8px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background: #000;
+  color: #fff;
+}
+
+.space-image {
+  position: relative;
+  bottom: 25px;
+}
+
+.view-image {
+  margin-top: -10px;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-image span {
+  margin-left: 5px;
+}
 
 
+
+ .slider-section {
+      width: 100%;
+      max-width: 1000px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      position: relative;
+      left: 240px;
+      margin-bottom: 40px;
+    }
+
+    /* Hide all slides by default */
+    .slide {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    /* Show active one */
+    .slide.active {
+      display: flex;
+    }
+
+    .slide img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
+    }
+
+    .slide-content {
+      width: 45%;
+    }
+
+    .slide-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .slide-content p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .slide-content button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .slide-content button:hover {
+      background-color: #333;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #333;
+      transition: 0.3s;
+      z-index: 2;
+    }
+
+    .nav-arrow:hover {
+      color: #000;
+    }
+
+    .prev {
+      left: 15px;
+    }
+
+    .next {
+      right: 15px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0 20px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #bbb;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dot.active {
+      background-color: #000;
+    }
