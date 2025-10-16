@@ -20,10 +20,12 @@
       padding-top: 20px;
       height: 132px;
       display: flex;
-      position: relative;
+      position: sticky;
+      top: -88px;
       flex-direction: column;
       border-bottom: 1px solid rgba(100, 120, 255, 0.2);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
     }
 
     
