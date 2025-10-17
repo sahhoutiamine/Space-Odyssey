@@ -292,12 +292,14 @@
 }
 .astronaut-image {
     position: absolute;
-    bottom: 230px;
-    left: 250px;
+    bottom: 150px;
+    left: 280px;
     transform: rotate(20deg);
     width: 600px;
     height: 600px;
     z-index: 10;
+    animation: float 6s ease-in-out infinite;
+
 }
 .astronaut2-image {
     position: absolute;
@@ -307,6 +309,8 @@
     width: 480px;
     height: 480px;
     z-index: 100;
+    animation: float 6s ease-in-out infinite;
+
 }
 
 .space-title {
@@ -392,3 +396,15 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+@keyframes float {
+            0% {
+                transform: translateY(-10%) translateX(0);
+            }
+            50% {
+                transform: translateY(-15%) translateX(10px);
+            }
+            100% {
+                transform: translateY(-10%) translateX(0);
+            }
+        }
