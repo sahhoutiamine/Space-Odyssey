@@ -1,117 +1,151 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    body {
-      background-color: #ffffff;
-      color: white;
-    }
+/* Reset all elements to remove default margins/padding and set consistent box model */
+/* Set Poppins as default font family for entire page */
 
+body {
+  background-color: #ffffff;
+  color: white;
+}
 
+/* Set white background and default white text color */
 
+/* -------Navbar------- */
+.navbar {
+  background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
+  padding-top: 20px;
+  height: 132px;
+  display: flex;
+  position: sticky;
+  top: -85px;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(100, 120, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
-    /* -------Navbar------- */
+/* Navbar with space-themed background image */
+/* Sticky positioning that hides partially off-screen (top: -85px) */
+/* Flex column layout for header and navigation links */
+/* Semi-transparent border and shadow for depth */
+/* High z-index to ensure navbar stays on top */
 
-    .navbar {
-      background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-      padding-top: 20px;
-      height: 132px;
-      display: flex;
-      position: sticky;
-      top: -85px;
-      flex-direction: column;
-      border-bottom: 1px solid rgba(100, 120, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
+.header-section {
+  display: flex;
+  align-items: flex-end;
+}
 
-    
-    
-    .header-section {
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
-      margin-bottom: 0.25rem;
-    }
-    
-    .title {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    
-    .nav-container {
-      width: 100%;
-    }
-    
-    .nav-links {
-      display: flex;
-      background-color: rgba(255, 255, 255, 0.95);
-      list-style: none;
-      margin-top: 10px;
-      width: 100%;
-      justify-self: end;
-      padding: 0.75rem 1.5rem;
-      height: 45px;
-      
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.7);
-      font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      position: relative;
-      padding: 0.5rem 1rem;
-      flex: 1;
-      text-align: center;
-    }
-    
-    .nav-links a:hover {
-      color: black;
-    }
-    
-    
-    
-    .nav-links a:hover::after {
-      width: 80%;
-    }
-    
-    .nav-links #links.active {
-      background-color: black;
-      color: white;
-      border-radius: 8px;
-    }
-    
-    .nav-links a.active::after {
-      width: 80%;
-      background-color: white;
-    }
+/* Flex container for logo and name/title */
 
-    .nav-links li:first-child {
-      margin-left: auto;
-    } 
-    .nav-links li {
-      margin-left: 8%;
-    } 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stack name and title vertically */
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+/* Large, bold name text with letter spacing for style */
+
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Subtitle with lighter weight, semi-transparent, uppercase */
+
+.nav-container {
+  width: 100%;
+}
+
+/* Full width container for navigation links */
+
+.nav-links {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+  justify-self: end;
+  padding: 0.75rem 1.5rem;
+  height: 45px;
+}
+
+/* Navigation links container with semi-transparent white background */
+/* Flex layout for horizontal navigation */
+/* Fixed height and padding for consistent appearance */
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Navigation link styles */
+/* Semi-transparent black text with hover effects */
+/* Flex: 1 makes links evenly distribute space */
+/* Centered text with padding */
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Darker text color on hover */
+
+.nav-links a:hover::after {
+  width: 80%;
+}
+
+/* Underline animation on hover (though ::after not defined in this snippet) */
+
+.nav-links #links.active {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Active state for navigation links - black background, white text */
+
+.nav-links a.active::after {
+  width: 80%;
+  background-color: white;
+}
+
+/* Active link underline styling */
+
+.nav-links li:first-child {
+  margin-left: auto;
+}
+
+/* First navigation item pushed to the right */
+
+.nav-links li {
+  margin-left: 8%;
+}
+
+/* Space between navigation items */
 
 .social-icons {
   display: flex;
@@ -120,6 +154,10 @@
   margin-right: auto;
 }
 
+/* Social media icons container */
+/* Flex layout with gap between icons */
+/* Auto margin right pushes content to the left */
+
 .social-icons img {
   width: 22px;
   height: 22px;
@@ -127,45 +165,75 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Social icon images with consistent size */
+/* Hover effects for interactivity */
+
 .social-icons img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
 
+/* Scale and fade effect on hover */
 
 /* -------Footer------- */
 .footer {
     background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
     padding: 60px 10%;
 }
+
+/* Footer with same space background as navbar */
+/* Ample padding for content spacing */
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Center footer content with max width */
+
 .footer-columns{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
 }
+
+/* 4-column grid layout for footer sections */
+/* Large gap between columns */
+
 .footer-col h3 {
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
+
+/* Footer column headings */
+
 .footer-col ul {
     list-style: none;
     padding: 0;
 }
+
+/* Remove default list styling */
+
 .footer-col ul li {
     margin: 8px 0
 }
+
+/* Space between footer list items */
+
 .footer-col ul li a {
     color: #ccc;
     text-decoration: none;
     transition: 0.3s;
 }
+
+/* Footer links with light gray color and hover transition */
+
 .footer-col ul li a:hover {
     color: #fff;
 }
+
+/* White color on hover */
+
 .footer-subscribe input {
     width: 100%;
     padding: 10px;
@@ -173,11 +241,17 @@
     border-radius: 6px;
     font-size: 0.9rem;
 }
+
+/* Newsletter input field - full width with rounded corners */
+
 .footer-line {
     margin: 50px 0 25px;
     border: none;
     border-top: 1px solid #555
 }
+
+/* Horizontal divider line between footer sections */
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -185,30 +259,51 @@
     flex-wrap: wrap;
     text-align: center;
 }
+
+/* Footer bottom section with spaced-out layout */
+/* Flex wrap for responsive behavior */
+
 .footer-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+/* Left footer section with logo and text */
+
 .footer-left img {
     width: 50px;
 }
+
+/* Footer logo size */
+
 .footer-left p {
     font-size: 0.9rem;
     color: #ccc
 }
+
+/* Footer text styling */
+
 .footer-left span {
   font-size: 0.8rem;
   color: #aaa;
 }
+
+/* Smaller, lighter text for copyright */
+
 .footer-center a {
   color: #ccc;
   margin: 0 10px;
   text-decoration: none;
 }
+
+/* Center footer links */
+
 .footer-center a:hover {
   color: #fff;
 }
+
+/* White color on hover */
 
 .footer-right a img {
   width: 30px;
@@ -217,9 +312,13 @@
   transition: 0.3s;
 }
 
+/* Footer social icons with reduced brightness */
+
 .footer-right a img:hover {
   filter: brightness(1);
 }
+
+/* Full brightness on hover */
 
 /* -------About Page Style------- */
 .space-section {
@@ -233,6 +332,11 @@
     margin: 40px;
     border-radius: 20px;
 }
+
+/* Main about section with space background */
+/* Fixed height with max width constraint */
+/* Positioned 120px from left with margins */
+/* Rounded corners and hidden overflow */
 
 .content-card {
     position: absolute;
@@ -249,6 +353,12 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Content card positioned on right side */
+/* Vertically centered using transform */
+/* Fixed width and height with padding */
+/* Glass-morphism effect with blur backdrop */
+/* Border and shadow for definition */
+
 .section-title {
     font-size: 2rem;
     font-weight: 700;
@@ -257,6 +367,9 @@
     color: #fff;
 }
 
+/* Section title with large, bold text */
+/* Top margin to position within content card */
+
 .tagline {
     font-size: 1.2rem;
     font-weight: 300;
@@ -264,12 +377,18 @@
     color: #c7c7c7;
 }
 
+/* Tagline/subtitle with lighter weight and gray color */
+/* Large bottom margin for spacing */
+
 .content {
     font-size: 1rem;
     line-height: 1.2;
     margin-bottom: 30px;
     color: #e8e8e8;
 }
+
+/* Main content text with light gray color */
+/* Compact line height for dense text layout */
 
 .cta-button {
     position: absolute;
@@ -286,10 +405,17 @@
     cursor: pointer;
 }
 
+/* Call-to-action button positioned at bottom right */
+/* Glass-morphism style with semi-transparent background */
+/* Pointer cursor for interactivity */
+
 .cta-button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px #ffffff60;
 }
+
+/* Scale effect and glow on hover */
+
 .astronaut-image {
     position: absolute;
     bottom: 150px;
@@ -298,9 +424,14 @@
     width: 600px;
     height: 600px;
     z-index: 10;
-    animation: float 6s ease-in-out infinite;
-
+    animation: float 20s ease-in-out infinite;
 }
+
+/* First astronaut image positioned in main section */
+/* Rotated 20 degrees for dynamic appearance */
+/* Large size with high z-index to appear above background */
+/* Continuous floating animation */
+
 .astronaut2-image {
     position: absolute;
     top: 582px;
@@ -309,9 +440,13 @@
     width: 480px;
     height: 480px;
     z-index: 100;
-    animation: float 6s ease-in-out infinite;
-
+    animation: float 20s ease-in-out infinite;
 }
+
+/* Second astronaut image positioned differently */
+/* Smaller size with higher z-index */
+/* Different rotation and position for variety */
+/* Same floating animation */
 
 .space-title {
     position: absolute;
@@ -322,8 +457,11 @@
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
     z-index: 5;
-  
 }
+
+/* Large title text positioned on left side */
+/* Extra large font size with text shadow */
+/* Medium z-index to appear above background but below astronauts */
 
 .new-section {
     width: 100%;
@@ -338,6 +476,11 @@
     padding: 0 80px; 
 }
 
+/* Community section with background image */
+/* Fixed height with full width */
+/* Flex layout aligned to start (left) */
+/* Horizontal padding for content spacing */
+
 .section-content {
     display: flex; 
     align-items: flex-start; 
@@ -348,10 +491,17 @@
     color: white;
 }
 
+/* Content container with flex layout */
+/* Items aligned to top with space between */
+/* Max width constraint for large screens */
+
 .text-block {
     flex: 1;
     max-width: 600px;
 }
+
+/* Text content area taking available space */
+/* Max width to prevent overly long lines */
 
 .text-block h2 {
     font-size: 2.2rem;
@@ -360,11 +510,15 @@
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
+/* Section heading with medium weight and text shadow */
+
 .text-block p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #e8e8e8;
 }
+
+/* Section description with good readability */
 
 .stats-container {
     flex: 1;
@@ -374,21 +528,31 @@
     gap: 250px; 
 }
 
+/* Statistics container with large left margin */
+/* Flex layout with huge gap between columns */
+
 .stat-column {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Column layout for stats - vertical stacking */
+/* Gap between stat items */
+
 .stat-item {
     text-align: left;
 }
+
+/* Individual stat item aligned to left */
 
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 5px;
 }
+
+/* Large, bold number for emphasis */
 
 .stat-label {
     font-size: 0.9rem;
@@ -397,14 +561,25 @@
     letter-spacing: 1px;
 }
 
+/* Stat label with small, uppercase text */
+/* Light gray color and letter spacing for style */
+
 @keyframes float {
-            0% {
-                transform: translateY(-10%) translateX(0);
-            }
-            50% {
-                transform: translateY(-15%) translateX(10px);
-            }
-            100% {
-                transform: translateY(-10%) translateX(0);
-            }
-        }
+    0% {
+        transform: translateY(-4%) translateX(0);
+        rotate: 0deg;
+    }
+    50% {
+        transform: translateY(-6%) translateX(10px);
+        rotate: 5deg;
+    }
+    100% {
+        transform: translateY(-4%) translateX(0);
+        rotate: 0deg;
+    }
+}
+
+/* Floating animation for astronaut images */
+/* Subtle vertical and horizontal movement with rotation */
+/* Creates weightless, drifting effect in space */
+/* 20-second cycle for slow, natural movement */

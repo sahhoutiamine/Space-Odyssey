@@ -1,117 +1,151 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    body {
-      background-color: #ffffff;
-      color: white;
-    }
+/* Reset all elements to remove default margins/padding and set consistent box model */
+/* Set Poppins as default font family for entire page */
 
+body {
+  background-color: #ffffff;
+  color: white;
+}
 
+/* Set white background and default white text color */
 
+/* -------Navbar------- */
+.navbar {
+  background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
+  padding-top: 20px;
+  height: 132px;
+  display: flex;
+  position: sticky;
+  top: -85px;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(100, 120, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
-    /* -------Navbar------- */
+/* Navbar with space-themed background image */
+/* Sticky positioning that hides partially off-screen (top: -85px) */
+/* Flex column layout for header and navigation links */
+/* Semi-transparent border and shadow for depth */
+/* High z-index to ensure navbar stays on top */
 
-    .navbar {
-      background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-      padding-top: 20px;
-      height: 132px;
-      display: flex;
-      position: sticky;
-      top: -85px;
-      flex-direction: column;
-      border-bottom: 1px solid rgba(100, 120, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
+.header-section {
+  display: flex;
+  align-items: flex-end;
+}
 
-    
-    
-    .header-section {
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
-      margin-bottom: 0.25rem;
-    }
-    
-    .title {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    
-    .nav-container {
-      width: 100%;
-    }
-    
-    .nav-links {
-      display: flex;
-      background-color: rgba(255, 255, 255, 0.95);
-      list-style: none;
-      margin-top: 10px;
-      width: 100%;
-      justify-self: end;
-      padding: 0.75rem 1.5rem;
-      height: 45px;
-      
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.7);
-      font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      position: relative;
-      padding: 0.5rem 1rem;
-      flex: 1;
-      text-align: center;
-    }
-    
-    .nav-links a:hover {
-      color: black;
-    }
-    
-    
-    
-    .nav-links a:hover::after {
-      width: 80%;
-    }
-    
-    .nav-links #links.active {
-      background-color: black;
-      color: white;
-      border-radius: 8px;
-    }
-    
-    .nav-links a.active::after {
-      width: 80%;
-      background-color: white;
-    }
+/* Flex container for logo and name/title */
 
-    .nav-links li:first-child {
-      margin-left: auto;
-    } 
-    .nav-links li {
-      margin-left: 8%;
-    } 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stack name and title vertically */
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+/* Large, bold name text with letter spacing for style */
+
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Subtitle with lighter weight, semi-transparent, uppercase */
+
+.nav-container {
+  width: 100%;
+}
+
+/* Full width container for navigation links */
+
+.nav-links {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+  justify-self: end;
+  padding: 0.75rem 1.5rem;
+  height: 45px;
+}
+
+/* Navigation links container with semi-transparent white background */
+/* Flex layout for horizontal navigation */
+/* Fixed height and padding for consistent appearance */
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Navigation link styles */
+/* Semi-transparent black text with hover effects */
+/* Flex: 1 makes links evenly distribute space */
+/* Centered text with padding */
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Darker text color on hover */
+
+.nav-links a:hover::after {
+  width: 80%;
+}
+
+/* Underline animation on hover (though ::after not defined in this snippet) */
+
+.nav-links #links.active {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Active state for navigation links - black background, white text */
+
+.nav-links a.active::after {
+  width: 80%;
+  background-color: white;
+}
+
+/* Active link underline styling */
+
+.nav-links li:first-child {
+  margin-left: auto;
+}
+
+/* First navigation item pushed to the right */
+
+.nav-links li {
+  margin-left: 8%;
+}
+
+/* Space between navigation items */
 
 .social-icons {
   display: flex;
@@ -120,6 +154,10 @@
   margin-right: auto;
 }
 
+/* Social media icons container */
+/* Flex layout with gap between icons */
+/* Auto margin right pushes content to the left */
+
 .social-icons img {
   width: 22px;
   height: 22px;
@@ -127,45 +165,75 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Social icon images with consistent size */
+/* Hover effects for interactivity */
+
 .social-icons img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
 
+/* Scale and fade effect on hover */
 
 /* -------Footer------- */
 .footer {
     background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
     padding: 60px 10%;
 }
+
+/* Footer with same space background as navbar */
+/* Ample padding for content spacing */
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Center footer content with max width */
+
 .footer-columns{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
 }
+
+/* 4-column grid layout for footer sections */
+/* Large gap between columns */
+
 .footer-col h3 {
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
+
+/* Footer column headings */
+
 .footer-col ul {
     list-style: none;
     padding: 0;
 }
+
+/* Remove default list styling */
+
 .footer-col ul li {
     margin: 8px 0
 }
+
+/* Space between footer list items */
+
 .footer-col ul li a {
     color: #ccc;
     text-decoration: none;
     transition: 0.3s;
 }
+
+/* Footer links with light gray color and hover transition */
+
 .footer-col ul li a:hover {
     color: #fff;
 }
+
+/* White color on hover */
+
 .footer-subscribe input {
     width: 100%;
     padding: 10px;
@@ -173,11 +241,17 @@
     border-radius: 6px;
     font-size: 0.9rem;
 }
+
+/* Newsletter input field - full width with rounded corners */
+
 .footer-line {
     margin: 50px 0 25px;
     border: none;
     border-top: 1px solid #555
 }
+
+/* Horizontal divider line between footer sections */
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -185,30 +259,51 @@
     flex-wrap: wrap;
     text-align: center;
 }
+
+/* Footer bottom section with spaced-out layout */
+/* Flex wrap for responsive behavior */
+
 .footer-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+/* Left footer section with logo and text */
+
 .footer-left img {
     width: 50px;
 }
+
+/* Footer logo size */
+
 .footer-left p {
     font-size: 0.9rem;
     color: #ccc
 }
+
+/* Footer text styling */
+
 .footer-left span {
   font-size: 0.8rem;
   color: #aaa;
 }
+
+/* Smaller, lighter text for copyright */
+
 .footer-center a {
   color: #ccc;
   margin: 0 10px;
   text-decoration: none;
 }
+
+/* Center footer links */
+
 .footer-center a:hover {
   color: #fff;
 }
+
+/* White color on hover */
 
 .footer-right a img {
   width: 30px;
@@ -217,335 +312,361 @@
   transition: 0.3s;
 }
 
+/* Footer social icons with reduced brightness */
+
 .footer-right a img:hover {
   filter: brightness(1);
 }
 
-/* planets cards */
-/* .planets-card {
-    position: relative;
-    width: 90%;
-    height: 500px;
-    left: 75px;
-    background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-}
+/* Full brightness on hover */
 
-.card-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.content-card {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
-    width: 30%;
-    height: 420px;
-    display: flex;
-    flex-direction: column;  stack content vertically 
-    justify-content: space-between;  push button to bottom 
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 30px;
-    z-index: 3;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.content-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #fff;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.content-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #e0e0e0;
-    margin-bottom: 25px;
-}
-
-.learn-btn {
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 12px 30px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    align-self: flex-end;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.learn-btn:hover {
-    transform: translateY(-3px);
-}
-.planet {
-    position: absolute;
-    bottom: -10px;
-    width: 520px;
-    height: 520px;
-} */
-
-
+/* ====== SOLAR SYSTEM SECTION ====== */
 .space-section {
-      position: relative;
-      width: 100%;
-      height: 140vh;
-      background: url(images/stars-space-darkness.jpg) repeat center center/cover;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-    }
+  position: relative;
+  width: 100%;
+  height: 140vh;
+  background: url(images/stars-space-darkness.jpg) repeat center center/cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
 
-    
+/* Solar system section with starry background */
+/* 140vh height for tall section to accommodate orbits */
+/* Centered content with hidden overflow */
+/* Background repeats to fill space */
+
+/* ====== SUN ====== */
+.sun {
+  position: absolute;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 60px #ff8c00, 0 0 100px #ff6347;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Sun positioned at center with high z-index */
+/* Circular shape with glowing orange/red shadow */
+/* Pulsing animation for dynamic effect */
+
+.sun img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Sun image fills container and maintains circular shape */
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Pulsing animation - scales sun up and down slightly */
+
+/* ====== ORBITS ====== */
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: orbit linear infinite;
+}
+
+/* Circular orbit paths with dashed semi-transparent borders */
+/* Infinite orbital animation at different speeds */
+
+.mercury-orbit { 
+  width: 180px; 
+  height: 180px; 
+  animation-duration: 8s;
+}
+
+/* Mercury's orbit - smallest and fastest */
+
+.venus-orbit { 
+  width: 250px; 
+  height: 250px; 
+  animation-duration: 12s;
+}
+
+/* Venus orbit - slightly larger and slower */
+
+.earth-orbit { 
+  width: 330px; 
+  height: 330px; 
+  animation-duration: 16s;
+}
+
+/* Earth orbit - medium size and speed */
+
+.mars-orbit { 
+  width: 420px; 
+  height: 420px; 
+  animation-duration: 20s;
+}
+
+/* Mars orbit - larger and slower */
+
+.jupiter-orbit { 
+  width: 550px; 
+  height: 550px; 
+  animation-duration: 30s;
+}
+
+/* Jupiter orbit - much larger and slower */
+
+.saturn-orbit { 
+  width: 680px; 
+  height: 680px; 
+  animation-duration: 40s;
+}
+
+/* Saturn orbit - even larger and slower */
+
+.uranus-orbit { 
+  width: 800px; 
+  height: 800px; 
+  animation-duration: 50s;
+}
+
+/* Uranus orbit - very large and slow */
+
+.neptune-orbit { 
+  width: 920px; 
+  height: 920px; 
+  animation-duration: 60s;
+}
+
+/* Neptune orbit - extremely large and slow */
+
+.pluto-orbit { 
+  width: 1000px; 
+  height: 1000px; 
+  animation-duration: 70s;
+}
+
+/* Pluto orbit - largest and slowest */
+
+.moon-orbit {
+  width: 40px;
+  height: 40px;
+  animation-duration: 3s;
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+/* Moon orbit around Earth - very small and fast */
+/* Positioned relative to Earth's position */
+
+/* ====== PLANETS ====== */
+.planet {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Planet container positioned at top of orbit */
+/* Centered horizontally with pointer cursor */
+/* Hover transform for interactivity */
+
+.planet:hover {
+  transform: translateX(-50%) scale(1.2);
+}
+
+/* Scale effect when hovering over planets */
+
+.planet-sphere {
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+/* Circular planet appearance with continuous spin animation */
+
+.planet-sphere img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Planet images maintain circular shape */
+
+/* Individual planet sizes - proportional to real solar system */
+.mercury .planet-sphere {
+  width: 25px;
+  height: 25px;
+}
+
+/* Mercury - smallest planet */
+
+.venus .planet-sphere {
+  width: 35px;
+  height: 35px;
+}
+
+/* Venus - slightly larger */
+
+.earth .planet-sphere {
+  width: 38px;
+  height: 38px;
+}
+
+/* Earth - similar to Venus but slightly larger */
+
+.mars .planet-sphere {
+  width: 32px;
+  height: 32px;
+}
+
+/* Mars - smaller than Earth */
+
+.jupiter .planet-sphere {
+  width: 70px;
+  height: 70px;
+}
+
+/* Jupiter - largest planet */
+
+.saturn .planet-sphere {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #f4d47c, #c9a65c);
+  position: relative;
+}
+
+/* Saturn with custom gradient colors and rings */
+/* Position relative for ring pseudo-element */
+
+.saturn .planet-sphere::after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, rgba(200, 150, 100, 0.6), transparent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(200, 150, 100, 0.4);
+}
+
+/* Saturn's rings - elliptical shape with gradient transparency */
+/* Positioned centered on the planet */
+
+.uranus .planet-sphere {
+  width: 48px;
+  height: 48px;
+}
+
+/* Uranus - medium-large planet */
+
+.neptune .planet-sphere {
+  width: 46px;
+  height: 46px;
+}
+
+/* Neptune - similar to Uranus */
+
+.pluto .planet-sphere {
+  width: 20px;
+  height: 20px;
+}
+
+/* Pluto - dwarf planet, very small */
+
+.moon .planet-sphere {
+  width: 18px;
+  height: 18px;
+}
+
+/* Moon - natural satellite, smallest object */
   
-    /* ====== SUN ====== */
-    .sun {
-      position: absolute;
-      z-index: 10;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      box-shadow: 0 0 60px #ff8c00, 0 0 100px #ff6347;
-      animation: pulse 4s ease-in-out infinite;
-    }
+.planet-info {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  bottom: 20px;
+}
 
-    .sun img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    }
+/* Planet information tooltip with semi-transparent background */
+/* Rounded corners with blur effect for glass-morphism */
+/* Centered text with padding */
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
+/* Individual planet info panel positions */
+#mercury-info { left: 20px; bottom: 140px; background: rgba(184, 184, 184, 0.25); }
+/* Mercury info with grayish background */
 
-    /* ====== ORBITS ====== */
-    .orbit {
-      position: absolute;
-      border: 1px dashed rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      animation: orbit linear infinite;
-    }
+#venus-info { left: 240px; bottom: 140px; background: rgba(255, 216, 155, 0.25); }
+/* Venus info with peachy background */
 
-    .mercury-orbit { 
-      width: 180px; 
-      height: 180px; 
-      animation-duration: 8s;
-    }
+#earth-info { left: 460px; bottom: 140px; background: rgba(74, 144, 226, 0.25); }
+/* Earth info with blue background */
 
-    .venus-orbit { 
-      width: 250px; 
-      height: 250px; 
-      animation-duration: 12s;
-    }
+#moon-info { left: 680px; bottom: 140px; background: rgba(224, 224, 224, 0.25); width: 180px; }
+/* Moon info with light gray background, slightly narrower */
 
-    .earth-orbit { 
-      width: 330px; 
-      height: 330px; 
-      animation-duration: 16s;
-    }
+#mars-info { left: 880px; bottom: 140px; background: rgba(255, 107, 74, 0.25); }
+/* Mars info with reddish background */
 
-    .mars-orbit { 
-      width: 420px; 
-      height: 420px; 
-      animation-duration: 20s;
-    }
+#jupiter-info { left: 1100px; bottom: 140px; background: rgba(212, 165, 116, 0.25); }
+/* Jupiter info with brownish background */
 
-    .jupiter-orbit { 
-      width: 550px; 
-      height: 550px; 
-      animation-duration: 30s;
-    }
+#saturn-info { left: 1320px; bottom: 140px; background: rgba(244, 212, 124, 0.25); }
+/* Saturn info with golden background */
 
-    .saturn-orbit { 
-      width: 680px; 
-      height: 680px; 
-      animation-duration: 40s;
-    }
+#uranus-info { left: 20px; background: rgba(126, 232, 232, 0.25); }
+/* Uranus info with cyan background */
 
-    .uranus-orbit { 
-      width: 800px; 
-      height: 800px; 
-      animation-duration: 50s;
-    }
+#neptune-info { left: 240px; background: rgba(74, 105, 189, 0.25); }
+/* Neptune info with blue background */
 
-    .neptune-orbit { 
-      width: 920px; 
-      height: 920px; 
-      animation-duration: 60s;
-    }
+#pluto-info { left: 460px; background: rgba(212, 196, 176, 0.25); }
+/* Pluto info with beige background */
 
-    .pluto-orbit { 
-      width: 1000px; 
-      height: 1000px; 
-      animation-duration: 70s;
-    }
+.planet-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
 
-    .moon-orbit {
-      width: 40px;
-      height: 40px;
-      animation-duration: 3s;
-      position: absolute;
-      top: 75%;
-      left: 75%;
-      margin-top: -30px;
-      margin-left: -30px;
-    }
+/* Planet name heading in info panel */
 
-    /* ====== PLANETS ====== */
-    .planet {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
+.planet-info p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0;
+}
 
-    .planet:hover {
-      transform: translateX(-50%) scale(1.2);
-    }
+/* Planet description text in info panel */
 
-    .planet-sphere {
-      border-radius: 50%;
-      animation: spin 20s linear infinite;
-      width: 100%;
-      height: 100%;
-    }
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
-    .planet-sphere img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    }
+/* Orbit animation - continuous 360 degree rotation */
 
-    .mercury .planet-sphere {
-      width: 25px;
-      height: 25px;
-    }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
-    .venus .planet-sphere {
-      width: 35px;
-      height: 35px;
-    }
-
-    .earth .planet-sphere {
-      width: 38px;
-      height: 38px;
-    }
-
-    .mars .planet-sphere {
-      width: 32px;
-      height: 32px;
-    }
-
-    .jupiter .planet-sphere {
-      width: 70px;
-      height: 70px;
-    }
-
-    .saturn .planet-sphere {
-      width: 60px;
-      height: 60px;
-      background: radial-gradient(circle at 30% 30%, #f4d47c, #c9a65c);
-      position: relative;
-    }
-
-    .saturn .planet-sphere::after {
-      content: '';
-      position: absolute;
-      width: 90px;
-      height: 20px;
-      background: linear-gradient(to bottom, transparent, rgba(200, 150, 100, 0.6), transparent);
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 2px solid rgba(200, 150, 100, 0.4);
-    }
-
-    .uranus .planet-sphere {
-      width: 48px;
-      height: 48px;
-    }
-
-    .neptune .planet-sphere {
-      width: 46px;
-      height: 46px;
-    }
-
-    .pluto .planet-sphere {
-      width: 20px;
-      height: 20px;
-    }
-
-    .moon .planet-sphere {
-      width: 18px;
-      height: 18px;
-    }
-    
-    .planet-info {
-      position: absolute;
-      width: 200px;
-      text-align: center;
-      padding: 12px 15px;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      bottom: 20px;
-    }
-
-    #mercury-info { left: 20px; bottom: 140px; background: rgba(184, 184, 184, 0.25); }
-    #venus-info { left: 240px; bottom: 140px; background: rgba(255, 216, 155, 0.25); }
-    #earth-info { left: 460px; bottom: 140px; background: rgba(74, 144, 226, 0.25); }
-    #moon-info { left: 680px; bottom: 140px; background: rgba(224, 224, 224, 0.25); width: 180px; }
-    #mars-info { left: 880px; bottom: 140px; background: rgba(255, 107, 74, 0.25); }
-    #jupiter-info { left: 1100px; bottom: 140px; background: rgba(212, 165, 116, 0.25); }
-    #saturn-info { left: 1320px; bottom: 140px; background: rgba(244, 212, 124, 0.25); }
-    #uranus-info { left: 20px; background: rgba(126, 232, 232, 0.25); }
-    #neptune-info { left: 240px; background: rgba(74, 105, 189, 0.25); }
-    #pluto-info { left: 460px; background: rgba(212, 196, 176, 0.25); }
-
-    .planet-info h3 {
-      font-size: 1.2rem;
-      margin: 0 0 8px 0;
-      font-weight: 600;
-    }
-
-    .planet-info p {
-      font-size: 0.85rem;
-      line-height: 1.4;
-      opacity: 0.9;
-      margin: 0;
-    }
-
-    @keyframes orbit {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
+/* Planet spin animation - continuous rotation for visual interest */

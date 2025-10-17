@@ -1,117 +1,151 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    body {
-      background-color: #ffffff;
-      color: white;
-    }
+/* Reset all elements to remove default margins/padding and set consistent box model */
+/* Set Poppins as default font family for entire page */
 
+body {
+  background-color: #ffffff;
+  color: white;
+}
 
+/* Set white background and default white text color */
 
+/* -------Navbar------- */
+.navbar {
+  background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
+  padding-top: 20px;
+  height: 132px;
+  display: flex;
+  position: sticky;
+  top: -88px;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(100, 120, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
-    /* -------Navbar------- */
+/* Navbar with space-themed background image */
+/* Sticky positioning that hides partially off-screen (top: -88px) */
+/* Flex column layout for header and navigation links */
+/* Semi-transparent border and shadow for depth */
+/* High z-index to ensure navbar stays on top */
 
-    .navbar {
-      background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-      padding-top: 20px;
-      height: 132px;
-      display: flex;
-      position: sticky;
-      top: -88px;
-      flex-direction: column;
-      border-bottom: 1px solid rgba(100, 120, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
+.header-section {
+  display: flex;
+  align-items: flex-end;
+}
 
-    
-    
-    .header-section {
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
-      margin-bottom: 0.25rem;
-    }
-    
-    .title {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    
-    .nav-container {
-      width: 100%;
-    }
-    
-    .nav-links {
-      display: flex;
-      background-color: rgba(255, 255, 255, 0.95);
-      list-style: none;
-      margin-top: 10px;
-      width: 100%;
-      justify-self: end;
-      padding: 0.75rem 1.5rem;
-      height: 45px;
-      
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.7);
-      font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      position: relative;
-      padding: 0.5rem 1rem;
-      flex: 1;
-      text-align: center;
-    }
-    
-    .nav-links a:hover {
-      color: black;
-    }
-    
-    
-    
-    .nav-links a:hover::after {
-      width: 80%;
-    }
-    
-    .nav-links #links.active {
-      background-color: black;
-      color: white;
-      border-radius: 8px;
-    }
-    
-    .nav-links a.active::after {
-      width: 80%;
-      background-color: white;
-    }
+/* Flex container for logo and name/title */
 
-    .nav-links li:first-child {
-      margin-left: auto;
-    } 
-    .nav-links li {
-      margin-left: 8%;
-    } 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stack name and title vertically */
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+/* Large, bold name text with letter spacing for style */
+
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Subtitle with lighter weight, semi-transparent, uppercase */
+
+.nav-container {
+  width: 100%;
+}
+
+/* Full width container for navigation links */
+
+.nav-links {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+  justify-self: end;
+  padding: 0.75rem 1.5rem;
+  height: 45px;
+}
+
+/* Navigation links container with semi-transparent white background */
+/* Flex layout for horizontal navigation */
+/* Fixed height and padding for consistent appearance */
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Navigation link styles */
+/* Semi-transparent black text with hover effects */
+/* Flex: 1 makes links evenly distribute space */
+/* Centered text with padding */
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Darker text color on hover */
+
+.nav-links a:hover::after {
+  width: 80%;
+}
+
+/* Underline animation on hover (though ::after not defined in this snippet) */
+
+.nav-links #links.active {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Active state for navigation links - black background, white text */
+
+.nav-links a.active::after {
+  width: 80%;
+  background-color: white;
+}
+
+/* Active link underline styling */
+
+.nav-links li:first-child {
+  margin-left: auto;
+}
+
+/* First navigation item pushed to the right */
+
+.nav-links li {
+  margin-left: 8%;
+}
+
+/* Space between navigation items */
 
 .social-icons {
   display: flex;
@@ -120,6 +154,10 @@
   margin-right: auto;
 }
 
+/* Social media icons container */
+/* Flex layout with gap between icons */
+/* Auto margin right pushes content to the left */
+
 .social-icons img {
   width: 22px;
   height: 22px;
@@ -127,88 +165,145 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Social icon images with consistent size */
+/* Hover effects for interactivity */
+
 .social-icons img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
 
+/* Scale and fade effect on hover */
 
 /* -------Footer------- */
 .footer {
-    background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-    padding: 60px 10%;
+  background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
+  padding: 60px 10%;
 }
+
+/* Footer with same space background as navbar */
+/* Ample padding for content spacing */
+
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.footer-columns{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+
+/* Center footer content with max width */
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 }
+
+/* 4-column grid layout for footer sections */
+/* Large gap between columns */
+
 .footer-col h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
+
+/* Footer column headings */
+
 .footer-col ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
+
+/* Remove default list styling */
+
 .footer-col ul li {
-    margin: 8px 0
+  margin: 8px 0
 }
+
+/* Space between footer list items */
+
 .footer-col ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.3s;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
 }
+
+/* Footer links with light gray color and hover transition */
+
 .footer-col ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
+
+/* White color on hover */
+
 .footer-subscribe input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
+
+/* Newsletter input field - full width with rounded corners */
+
 .footer-line {
-    margin: 50px 0 25px;
-    border: none;
-    border-top: 1px solid #555
+  margin: 50px 0 25px;
+  border: none;
+  border-top: 1px solid #555
 }
+
+/* Horizontal divider line between footer sections */
+
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
+/* Footer bottom section with spaced-out layout */
+/* Flex wrap for responsive behavior */
+
 .footer-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
+
+/* Left footer section with logo and text */
+
 .footer-left img {
-    width: 50px;
+  width: 50px;
 }
+
+/* Footer logo size */
+
 .footer-left p {
-    font-size: 0.9rem;
-    color: #ccc
+  font-size: 0.9rem;
+  color: #ccc
 }
+
+/* Footer text styling */
+
 .footer-left span {
   font-size: 0.8rem;
   color: #aaa;
 }
+
+/* Smaller, lighter text for copyright */
+
 .footer-center a {
   color: #ccc;
   margin: 0 10px;
   text-decoration: none;
 }
+
+/* Center footer links */
+
 .footer-center a:hover {
   color: #fff;
 }
+
+/* White color on hover */
 
 .footer-right a img {
   width: 30px;
@@ -217,12 +312,15 @@
   transition: 0.3s;
 }
 
+/* Footer social icons with reduced brightness */
+
 .footer-right a img:hover {
   filter: brightness(1);
 }
 
-/* -------Hero section------- */
+/* Full brightness on hover */
 
+/* -------Hero section------- */
 .hero {
   position: relative;
   height: 100vh;
@@ -235,11 +333,12 @@
   color: white;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-
 }
 
+/* Full viewport height hero section with Earth background */
+/* Centered content with shadow for depth */
+/* Overflow hidden to contain any overflowing elements */
 
-/* why-------------------- */
 .hero::before {
   content: "";
   position: absolute;
@@ -251,21 +350,27 @@
   z-index: 1;
 }
 
+/* Dark overlay to improve text readability over background image */
+/* Positioned above background but below content */
+
 .hero-content {
   position: relative;
   z-index: 2;
-  /* why------------------- */
   max-width: 800px;
   padding: 20px;
 }
 
+/* Hero content positioned above overlay */
+/* Max width to control line length for readability */
+
 .hero h1 {
   font-size: 4rem;
   font-weight: 700;
-  /* properties------------- */
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 }
+
+/* Large, bold heading with text shadow for contrast */
 
 .hero p {
   font-size: 1.4rem;
@@ -275,6 +380,8 @@
   color: #e0e0e0;
 }
 
+/* Hero paragraph with light gray color and good line height */
+
 .explore-btn {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -283,17 +390,20 @@
   padding: 12px 28px;
   border-radius: 6px;
   backdrop-filter: blur(8px);
-  cursor: ponter;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-
+/* Glass-morphism style button with semi-transparent background */
+/* Backdrop filter for blur effect behind button */
+/* Pointer cursor for interactive element */
 
 .explore-btn:hover {
   background: rgba(255, 255, 255, 0.3);
-  /* why ---------------------- */
   transform: translateY(-2px);
 }
+
+/* Lighter background and lift effect on hover */
 
 .info-section {
   width: 100%;
@@ -302,6 +412,9 @@
   color: #111;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Info section with white background and dark text */
+/* Ample padding for content breathing room */
 
 /* ====== TOP CARDS ====== */
 .cards {
@@ -313,6 +426,10 @@
   margin-top: -50px;
 }
 
+/* Card container with flex layout and large gaps */
+/* Negative top margin to pull cards upward */
+/* Wrap for responsive behavior */
+
 .card {
   flex: 1;
   min-width: 280px;
@@ -321,18 +438,25 @@
   color: #fff;
   padding: 30px 30px;
   display: flex;
-  flex-direction: column; /* stack content vertically */
-  justify-content: space-between; /* push button to bottom */
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Individual card with background image and white text */
+/* Flex column to stack content and push button to bottom */
+/* Rounded corners with shadow and hover effects */
+/* Semi-transparent border for subtle definition */
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+/* Lift effect and enhanced shadow on hover */
 
 .card h3 {
   font-size: 1.4rem;
@@ -340,12 +464,16 @@
   color: #ffffff;
 }
 
+/* Card heading */
+
 .card p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 25px;
   color: #d4d4d4;
 }
+
+/* Card description text with light gray color */
 
 .learn-btn {
   background: rgba(255, 255, 255, 0.15);
@@ -361,30 +489,42 @@
   font-size: 0.95rem;
 }
 
+/* Learn more button with glass-morphism style */
+/* Aligned to right side of card */
+/* Pointer cursor for interactivity */
+
 .learn-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px #ffffff60;
 }
 
+/* Scale effect and glow on hover */
+
 /* ====== DESCRIPTION TEXT ====== */
 .info-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 60px 0;
 }
 
+/* Flex layout for info text and time counter */
+/* Space between elements with wrapping */
+
 .info-text {
-    flex: 1.5;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    margin: 0;
-    text-align: left;
-    max-width: 750px;
+  flex: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  text-align: left;
+  max-width: 750px;
 }
+
+/* Informational text with good readability settings */
+/* Larger flex value to take more space than time counter */
 
 .time-counter {
   display: flex;
@@ -393,7 +533,7 @@
   color: white;
   border-radius: 15px;
   padding: 25px 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   min-width: 320px;
   height: 150px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -401,10 +541,16 @@
   overflow: hidden;
 }
 
+/* Time counter with black background and white text */
+/* Fixed dimensions with shadow and hover effects */
+/* Overflow hidden to contain any pseudo-elements */
+
 .time-counter:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
+
+/* Lift effect on hover */
 
 .time-counter::before {
   content: '';
@@ -415,6 +561,8 @@
   height: 3px;
 }
 
+/* Top border element (color not specified in this snippet) */
+
 .header {
   display: flex;
   align-items: center;
@@ -422,9 +570,13 @@
   margin-bottom: 15px;
 }
 
+/* Time counter header with icon and title */
+
 .icon {
   font-size: 1.8rem;
 }
+
+/* Icon size */
 
 .title {
   font-size: 1.1rem;
@@ -432,6 +584,8 @@
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+/* Time counter title with slight transparency */
 
 .time-display {
   display: flex;
@@ -445,6 +599,9 @@
   padding-bottom: 10px;
 }
 
+/* Time display area - centered with large, spaced text */
+/* Flex-grow to fill available space */
+
 .time-unit {
   display: inline-block;
   margin: 0 5px;
@@ -453,75 +610,76 @@
   border-radius: 5px;
   letter-spacing: 15px;
 }
+
+/* Individual time units with subtle background and wide letter spacing */
+
 /* ====== ASTRONOMY SECTION ====== */
 .astronomy-card {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
+
+/* Full-width astronomy card with fixed height */
+/* Rounded corners and shadow for depth */
+/* Overflow hidden to contain background image */
 
 .card-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/asteroid.png') no-repeat center center/cover;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/asteroid.png') no-repeat center center/cover;
+  z-index: 1;
 }
+
+/* Background image covering entire card */
 
 .content-card {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
-    width: 45%;
-    height: 420px;
-    display: flex;
-    flex-direction: column; /* stack content vertically */
-    justify-content: space-between; /* push button to bottom */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    padding: 30px;
-    z-index: 3;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  width: 45%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
+
+/* Content card positioned on right side of astronomy card */
+/* Glass-morphism effect with blur backdrop */
+/* Stacked content with button at bottom */
+/* Higher z-index to appear above background */
 
 .content-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #fff;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* Content card heading with text shadow */
 
 .content-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #e0e0e0;
-    margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 25px;
 }
 
-.learn-btn {
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 12px 30px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    align-self: flex-end;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.learn-btn:hover {
-    transform: translateY(-3px);
-}
+/* Content card description text */
 
 .image-of-the-day {
   padding: 60px 10%;
@@ -530,6 +688,9 @@
   color: #000;
 }
 
+/* Image of the day section with negative top margin */
+/* Serif font for different typographic style */
+
 .image-day-content {
   display: flex;
   justify-content: space-between;
@@ -537,16 +698,22 @@
   gap: 50px;
 }
 
+/* Flex layout for text and image content */
+
 .text-content {
   flex: 1;
   max-width: 600px;
 }
+
+/* Text content taking available space with max width */
 
 .section-title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+/* Section heading */
 
 .image-title {
   font-size: 1.5rem;
@@ -557,22 +724,31 @@
   cursor: pointer;
 }
 
+/* Image title with blue color and underline */
+/* Pointer cursor indicates clickable */
+
 .description {
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
 
+/* Description text with good readability */
+
 .description a {
   color: #001c4b;
   text-decoration: underline;
 }
+
+/* Links in description */
 
 .credit {
   font-size: 0.9rem;
   margin-top: 10px;
   font-weight: 500;
 }
+
+/* Image credit text */
 
 .read-more {
   margin-top: 25px;
@@ -585,15 +761,22 @@
   transition: all 0.3s ease;
 }
 
+/* Read more button with outline style */
+/* White background with black border */
+
 .read-more:hover {
   background: #000;
   color: #fff;
 }
 
+/* Invert colors on hover */
+
 .space-image {
   position: relative;
   bottom: 25px;
 }
+
+/* Image positioned slightly upward */
 
 .view-image {
   margin-top: -10px;
@@ -606,123 +789,157 @@
   justify-content: center;
 }
 
+/* View image link with centered alignment */
+
 .view-image span {
   margin-left: 5px;
 }
 
+/* Space between text and icon */
 
+.slider-section {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 150px;
+  margin-bottom: 40px;
+}
 
- .slider-section {
-      width: 100%;
-      max-width: 1200px;
-      background: #fff;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-      position: relative;
-      left: 150px;
-      margin-bottom: 40px;
-    }
+/* Slider container with white background and shadow */
+/* Positioned 150px from left */
+/* Overflow hidden to contain slides */
 
-    /* Hide all slides by default */
-    .slide {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      padding: 30px;
-      transition: transform 0.6s ease-in-out;
-    }
+.slide {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  transition: transform 0.6s ease-in-out;
+}
 
-    /* Show active one */
-    .slide.active {
-      display: flex;
-    }
+/* Individual slides hidden by default */
+/* Flex layout for image and content side-by-side */
 
-    .slide img {
-      width: 45%;
-      border-radius: 10px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-      object-fit: cover;
-    }
+.slide.active {
+  display: flex;
+}
 
-    .slide-content {
-      width: 45%;
-    }
+/* Only active slide is visible */
 
-    .slide-content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      color: #111;
-    }
+.slide img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
 
-    .slide-content p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
+/* Slide images taking 45% width with rounded corners */
 
-    .slide-content button {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 10px 25px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.slide-content {
+  width: 45%;
+}
 
-    .slide-content button:hover {
-      background-color: #333;
-    }
+/* Slide content taking 45% width */
 
-    .nav-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: #333;
-      transition: 0.3s;
-      z-index: 2;
-    }
+.slide-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #111;
+}
 
-    .nav-arrow:hover {
-      color: #000;
-    }
+/* Slide heading */
 
-    .prev {
-      left: 15px;
-    }
+.slide-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
 
-    .next {
-      right: 15px;
-    }
+/* Slide description text */
 
-    .dots {
-      display: flex;
-      justify-content: center;
-      margin: 15px 0 20px;
-    }
+.slide-content button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .dot {
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      background-color: #bbb;
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+/* Slide button with hover effect */
 
-    .dot.active {
-      background-color: #000;
-    }
+.slide-content button:hover {
+  background-color: #333;
+}
 
-    
+/* Darker background on hover */
 
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+/* Navigation arrows positioned vertically centered */
+/* Transparent background with hover effect */
+
+.nav-arrow:hover {
+  color: #000;
+}
+
+/* Darker color on hover */
+
+.prev {
+  left: 15px;
+}
+
+/* Previous arrow on left */
+
+.next {
+  right: 15px;
+}
+
+/* Next arrow on right */
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 20px;
+}
+
+/* Dot navigation container */
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Individual dot indicators */
+/* Circle shape with hover/active states */
+
+.dot.active {
+  background-color: #000;
+}
+
+/* Active dot is black */
 
 .blur-cards-section {
   position: relative;
@@ -738,6 +955,10 @@
   margin: 60px 0;
 }
 
+/* Blur cards section with background image */
+/* Positioned 150px from left with fixed height */
+/* Centered content with rounded corners */
+
 .blur-cards-section::before {
   content: "";
   position: absolute;
@@ -750,6 +971,8 @@
   z-index: 1;
 }
 
+/* Dark overlay for better text readability */
+
 .blur-cards-container {
   position: relative;
   z-index: 2;
@@ -759,6 +982,9 @@
   width: 100%;
   max-width: 1200px;
 }
+
+/* Cards container above overlay */
+/* Flex layout with space between cards */
 
 .blur-card {
   flex: 1;
@@ -774,10 +1000,17 @@
   color: white;
 }
 
+/* Individual blur cards with glass-morphism effect */
+/* Semi-transparent background with blur */
+/* Horizontal margins for spacing */
+/* Hover effects for interactivity */
+
 .blur-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
+
+/* Lift effect on hover */
 
 .blur-card h3 {
   font-size: 1.8rem;
@@ -787,12 +1020,16 @@
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Blur card heading with centered text and shadow */
+
 .blur-card p {
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
   color: #e0e0e0;
 }
+
+/* Blur card description text */
 
 .community-section {
   padding: 80px 10%;
@@ -801,10 +1038,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Community section with white background */
+
 .community-section .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* Centered container with max width */
 
 .section-title {
   font-size: 2.5rem;
@@ -814,6 +1055,8 @@
   color: #000;
   position: relative;
 }
+
+/* Section title with centered text and underline effect */
 
 .section-title::after {
   content: '';
@@ -826,11 +1069,16 @@
   background: black;
 }
 
+/* Underline effect for section title */
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+
+/* Responsive grid for team members */
+/* Auto-fit with minimum 250px column width */
 
 .team-card {
   width: 300px;
@@ -843,10 +1091,16 @@
   padding: 30px 20px;
 }
 
+/* Team member cards with unique rounded corners */
+/* Shadow and hover effects */
+/* Fixed width with centered content */
+
 .team-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
+
+/* Lift effect on hover */
 
 .member-image {
   width: 200px;
@@ -861,6 +1115,9 @@
   font-size: 3rem;
 }
 
+/* Circular member image placeholder with gradient background */
+/* Fixed dimensions with centered content */
+
 .member-name {
   font-size: 1.4rem;
   font-weight: 600;
@@ -869,6 +1126,7 @@
   color: #000;
 }
 
+/* Team member name styling */
 
 .grow-section {
   padding: 80px 10%;
@@ -877,10 +1135,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Grow section with white background */
+
 .grow-section .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* Centered container */
 
 .main-title {
   font-size: 2.8rem;
@@ -890,6 +1152,8 @@
   color: #000;
   position: relative;
 }
+
+/* Main title with underline effect */
 
 .main-title::after {
   content: '';
@@ -902,12 +1166,17 @@
   background: black;
 }
 
+/* Title underline */
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   margin-bottom: 60px;
 }
+
+/* Responsive grid for feature cards */
+/* Minimum 300px column width */
 
 .feature-card {
   background: #fff;
@@ -919,10 +1188,15 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Feature cards with shadow and hover effects */
+/* Subtle border for definition */
+
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
+
+/* Lift effect on hover */
 
 .feature-title {
   font-size: 1.8rem;
@@ -931,6 +1205,8 @@
   color: #000;
   position: relative;
 }
+
+/* Feature title with underline effect */
 
 .feature-title::after {
   content: '';
@@ -943,12 +1219,16 @@
   background: black;
 }
 
+/* Feature title underline */
+
 .feature-description {
   font-size: 1rem;
   line-height: 1.7;
   color: #555;
   margin: 0;
 }
+
+/* Feature description text */
 
 .divider {
   width: 100%;
@@ -957,11 +1237,15 @@
   margin: 50px 0;
 }
 
+/* Gradient divider line between sections */
+
 .publishings-section {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* Centered publishing section with max width */
 
 .publishings-title {
   font-size: 1.4rem;
@@ -971,6 +1255,8 @@
   position: relative;
   display: inline-block;
 }
+
+/* Publishing title with underline */
 
 .publishings-title::after {
   content: '';
@@ -982,9 +1268,13 @@
   background: black;
 }
 
+/* Publishing title underline */
+
 .publishings-description {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
   margin: 0;
 }
+
+/* Publishing description text */

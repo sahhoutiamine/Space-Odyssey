@@ -1,117 +1,151 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    body {
-      background-color: #ffffff;
-      color: white;
-    }
+/* Reset all elements to remove default margins/padding and set consistent box model */
+/* Set Poppins as default font family for entire page */
 
+body {
+  background-color: #ffffff;
+  color: white;
+}
 
+/* Set white background and default white text color */
 
+/* -------Navbar------- */
+.navbar {
+  background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
+  padding-top: 20px;
+  height: 132px;
+  display: flex;
+  position: sticky;
+  top: -85px;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(100, 120, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
 
-    /* -------Navbar------- */
+/* Navbar with space-themed background image */
+/* Sticky positioning that hides partially off-screen (top: -85px) */
+/* Flex column layout for header and navigation links */
+/* Semi-transparent border and shadow for depth */
+/* High z-index to ensure navbar stays on top */
 
-    .navbar {
-      background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
-      padding-top: 20px;
-      height: 132px;
-      display: flex;
-      position: sticky;
-      top: -85px;
-      flex-direction: column;
-      border-bottom: 1px solid rgba(100, 120, 255, 0.2);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
+.header-section {
+  display: flex;
+  align-items: flex-end;
+}
 
-    
-    
-    .header-section {
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
-      margin-bottom: 0.25rem;
-    }
-    
-    .title {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    
-    .nav-container {
-      width: 100%;
-    }
-    
-    .nav-links {
-      display: flex;
-      background-color: rgba(255, 255, 255, 0.95);
-      list-style: none;
-      margin-top: 10px;
-      width: 100%;
-      justify-self: end;
-      padding: 0.75rem 1.5rem;
-      height: 45px;
-      
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.7);
-      font-weight: 500;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      position: relative;
-      padding: 0.5rem 1rem;
-      flex: 1;
-      text-align: center;
-    }
-    
-    .nav-links a:hover {
-      color: black;
-    }
-    
-    
-    
-    .nav-links a:hover::after {
-      width: 80%;
-    }
-    
-    .nav-links #links.active {
-      background-color: black;
-      color: white;
-      border-radius: 8px;
-    }
-    
-    .nav-links a.active::after {
-      width: 80%;
-      background-color: white;
-    }
+/* Flex container for logo and name/title */
 
-    .nav-links li:first-child {
-      margin-left: auto;
-    } 
-    .nav-links li {
-      margin-left: 8%;
-    } 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stack name and title vertically */
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+/* Large, bold name text with letter spacing for style */
+
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Subtitle with lighter weight, semi-transparent, uppercase */
+
+.nav-container {
+  width: 100%;
+}
+
+/* Full width container for navigation links */
+
+.nav-links {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+  justify-self: end;
+  padding: 0.75rem 1.5rem;
+  height: 45px;
+}
+
+/* Navigation links container with semi-transparent white background */
+/* Flex layout for horizontal navigation */
+/* Fixed height and padding for consistent appearance */
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Navigation link styles */
+/* Semi-transparent black text with hover effects */
+/* Flex: 1 makes links evenly distribute space */
+/* Centered text with padding */
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Darker text color on hover */
+
+.nav-links a:hover::after {
+  width: 80%;
+}
+
+/* Underline animation on hover (though ::after not defined in this snippet) */
+
+.nav-links #links.active {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Active state for navigation links - black background, white text */
+
+.nav-links a.active::after {
+  width: 80%;
+  background-color: white;
+}
+
+/* Active link underline styling */
+
+.nav-links li:first-child {
+  margin-left: auto;
+}
+
+/* First navigation item pushed to the right */
+
+.nav-links li {
+  margin-left: 8%;
+}
+
+/* Space between navigation items */
 
 .social-icons {
   display: flex;
@@ -121,6 +155,11 @@
   margin-top: -30px;
 }
 
+/* Social media icons container in navbar */
+/* Flex layout with gap between icons */
+/* Auto margin right pushes content to the left */
+/* Negative top margin to adjust vertical positioning */
+
 .social-icons img {
   width: 22px;
   height: 22px;
@@ -128,45 +167,75 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Social icon images with consistent size */
+/* Hover effects for interactivity */
+
 .social-icons img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
 
+/* Scale and fade effect on hover */
 
 /* -------Footer------- */
 .footer {
     background: url(images/stars-space-darkness.jpg) no-repeat center center/cover;
     padding: 60px 10%;
 }
+
+/* Footer with same space background as navbar */
+/* Ample padding for content spacing */
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Center footer content with max width */
+
 .footer-columns{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
 }
+
+/* 4-column grid layout for footer sections */
+/* Large gap between columns */
+
 .footer-col h3 {
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
+
+/* Footer column headings */
+
 .footer-col ul {
     list-style: none;
     padding: 0;
 }
+
+/* Remove default list styling */
+
 .footer-col ul li {
     margin: 8px 0
 }
+
+/* Space between footer list items */
+
 .footer-col ul li a {
     color: #ccc;
     text-decoration: none;
     transition: 0.3s;
 }
+
+/* Footer links with light gray color and hover transition */
+
 .footer-col ul li a:hover {
     color: #fff;
 }
+
+/* White color on hover */
+
 .footer-subscribe input {
     width: 100%;
     padding: 10px;
@@ -174,11 +243,17 @@
     border-radius: 6px;
     font-size: 0.9rem;
 }
+
+/* Newsletter input field - full width with rounded corners */
+
 .footer-line {
     margin: 50px 0 25px;
     border: none;
     border-top: 1px solid #555
 }
+
+/* Horizontal divider line between footer sections */
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -186,30 +261,51 @@
     flex-wrap: wrap;
     text-align: center;
 }
+
+/* Footer bottom section with spaced-out layout */
+/* Flex wrap for responsive behavior */
+
 .footer-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+/* Left footer section with logo and text */
+
 .footer-left img {
     width: 50px;
 }
+
+/* Footer logo size */
+
 .footer-left p {
     font-size: 0.9rem;
     color: #ccc
 }
+
+/* Footer text styling */
+
 .footer-left span {
   font-size: 0.8rem;
   color: #aaa;
 }
+
+/* Smaller, lighter text for copyright */
+
 .footer-center a {
   color: #ccc;
   margin: 0 10px;
   text-decoration: none;
 }
+
+/* Center footer links */
+
 .footer-center a:hover {
   color: #fff;
 }
+
+/* White color on hover */
 
 .footer-right a img {
   width: 30px;
@@ -218,10 +314,15 @@
   transition: 0.3s;
 }
 
+/* Footer social icons with reduced brightness */
+
 .footer-right a img:hover {
   filter: brightness(1);
 }
 
+/* Full brightness on hover */
+
+/* ====== CONTACT PAGE STYLES ====== */
 .contact-container {
   display: flex;
   max-width: 1200px;
@@ -234,6 +335,11 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+/* Main contact container with two-panel layout */
+/* Fixed height with white background and rounded corners */
+/* Centered with automatic horizontal margins */
+/* Shadow for depth and visual separation */
+
 /* LEFT SIDE */
 .contact-left {
   flex: 1;
@@ -245,10 +351,16 @@
   justify-content: space-between;
 }
 
+/* Left panel with background image and white text */
+/* Flex column to distribute content vertically */
+/* Space-between to push content to top and bottom */
+
 .contact-left h2 {
   font-size: 2rem;
   margin-bottom: 8px;
 }
+
+/* Contact section heading */
 
 .contact-left p {
   font-weight: 300;
@@ -256,9 +368,14 @@
   margin-top: -150px;
 }
 
+/* Contact description text with light weight and transparency */
+/* Negative top margin to adjust positioning */
+
 .contact-info {
   margin-top: 40px;
 }
+
+/* Contact information container with top spacing */
 
 .contact-info div {
   display: flex;
@@ -267,17 +384,27 @@
   font-size: 15px;
 }
 
+/* Individual contact info items with icon and text */
+/* Flex layout for horizontal alignment */
+/* Bottom margin for spacing between items */
 
 .contact-info img {
   width: 18px;
   margin-right: 10px;
 }
 
+/* Contact info icons with consistent size */
+/* Right margin for spacing between icon and text */
+
 .social-icons {
   display: flex;
   gap: 18px;
   margin-bottom: -35px;
 }
+
+/* Social icons container in contact section */
+/* Gap between icons */
+/* Negative bottom margin to adjust positioning */
 
 .social-icons img {
   width: 25px;
@@ -286,9 +413,14 @@
   transition: transform 0.3s;
 }
 
+/* Social media icons with pointer cursor */
+/* Larger size than navbar social icons */
+
 .social-icons img:hover {
   transform: scale(1.1);
 }
+
+/* Scale effect on hover for interactivity */
 
 /* RIGHT SIDE */
 .contact-right {
@@ -299,12 +431,18 @@
   justify-content: space-between;
 }
 
+/* Right panel takes 1.5x space of left panel */
+/* Ample padding for form content */
+/* Flex column to organize form elements */
+
 .contact-right, 
 .contact-right label, 
 .contact-right input, 
 .contact-right textarea {
   color: #000;
 }
+
+/* Ensure all text in right panel is black for contrast */
 
 form {
   width: 100%;
@@ -313,11 +451,17 @@ form {
   height: 100%;
 }
 
+/* Form takes full width and height of container */
+/* Column layout for form fields */
+
 .form-row {
   display: flex;
   gap: 25px;
   margin-bottom: 25px;
 }
+
+/* Form row for side-by-side input fields */
+/* Gap between fields and bottom margin */
 
 .input-group {
   flex: 1;
@@ -325,11 +469,16 @@ form {
   flex-direction: column;
 }
 
+/* Input container taking equal space in row */
+/* Column layout for label and input */
+
 label {
   font-weight: 600;
   font-size: 14px;
   margin-top: 20px;
 }
+
+/* Form labels with bold weight and spacing */
 
 input, textarea {
   border: none;
@@ -340,9 +489,15 @@ input, textarea {
   transition: 0.3s;
 }
 
+/* Input and textarea with minimal bottom-border style */
+/* No borders on other sides for clean look */
+/* Transition for focus effects */
+
 input:focus, textarea:focus {
   border-bottom: 1px solid #000;
 }
+
+/* Darker bottom border on focus for visual feedback */
 
 .radio-group {
   display: flex;
@@ -351,16 +506,23 @@ input:focus, textarea:focus {
   flex-wrap: wrap;
 }
 
+/* Radio button group with horizontal layout */
+/* Gap between options and wrapping for responsiveness */
+
 textarea {
   height: 90px;
   resize: none;
 }
+
+/* Textarea with fixed height and disabled resizing */
 
 .button-container {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
 }
+
+/* Send button container aligned to right */
 
 .send-btn {
   background: #000;
@@ -374,13 +536,17 @@ textarea {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-
+/* Send button with black background and white text */
+/* Rounded corners with shadow for depth */
+/* Pointer cursor for interactivity */
 
 .send-btn:hover {
   background: #333;
 }
 
+/* Dark gray background on hover */
 
+/* ====== CONTACT OPTIONS CARDS ====== */
 .contact-options {
   display: flex;
   justify-content: space-between;
@@ -392,17 +558,29 @@ textarea {
   gap: 40px;
 }
 
+/* Contact options container with flexible card layout */
+/* Space-between distribution with wrapping */
+/* Centered with max width constraint */
+/* Large gap between cards */
+
 .contact-card {
   flex: 1;
   min-width: 280px;
   text-align: left;
 }
 
+/* Individual contact option cards */
+/* Flexible width with minimum constraint */
+/* Left-aligned text content */
+
 .contact-icon {
   width: 45px;
   height: 45px;
   margin-bottom: 20px;
 }
+
+/* Contact card icons with consistent size */
+/* Bottom margin for spacing */
 
 .contact-card h3 {
   font-size: 1.3rem;
@@ -411,6 +589,8 @@ textarea {
   color: #000;
 }
 
+/* Contact card headings with black color */
+
 .contact-card p {
   font-size: 15px;
   color: #333;
@@ -418,18 +598,26 @@ textarea {
   margin-bottom: 15px;
 }
 
+/* Contact card description text with dark gray color */
+/* Good line height for readability */
+
 .contact-link {
   color: #000;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* Contact links with bold black text */
+/* No underline by default */
+
 .contact-link:hover {
   text-decoration: underline;
 }
+
+/* Underline on hover for interactivity */
 
 .phone {
   text-decoration: underline;
 }
 
-
+/* Phone number with underline style */
