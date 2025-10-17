@@ -32,53 +32,50 @@
     </nav>
 
 
-
-    <section class="contact-section">
-  <div class="contact-info">
+    <section class="contact-container">
+  <!-- LEFT SIDE -->
+  <div class="contact-left">
     <h2>Contact Us</h2>
     <p>Say something to start a live chat!</p>
 
-    <div class="info-item">
-      <i class="fa-solid fa-phone"></i>
-      <span>+1012 3456 789</span>
-    </div>
-    <div class="info-item">
-      <i class="fa-solid fa-envelope"></i>
-      <span>demo@gmail.com</span>
+    <div class="contact-info">
+      <div><img src="phone-icon.png" alt=""> <span>+1012 3456 789</span></div>
+      <div><img src="mail-icon.png" alt=""> <span>astrotech@space.com</span></div>
     </div>
 
     <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-discord"></i></a>
+      <img src="images/twitter-colored.png" alt="Twitter">
+      <img src="images/instagram-colored.png" alt="Instagram">
+      <img src="images/discord-colored.png" alt="Discord">
     </div>
   </div>
 
-  <div class="contact-form">
-    <form>
-      <div class="input-row">
+  <!-- RIGHT SIDE -->
+  <div class="contact-right">
+    <form action="contact-success.html" method="post">
+      <div class="form-row">
         <div class="input-group">
           <label>First Name</label>
-          <input type="text" placeholder="">
+          <input type="text" required>
         </div>
         <div class="input-group">
           <label>Last Name</label>
-          <input type="text" placeholder="">
+          <input type="text" required>
         </div>
       </div>
 
-      <div class="input-row">
+      <div class="form-row">
         <div class="input-group">
           <label>Email</label>
-          <input type="email" placeholder="">
+          <input type="email" required>
         </div>
         <div class="input-group">
           <label>Phone Number</label>
-          <input type="text" placeholder="">
+          <input type="text">
         </div>
       </div>
 
-      <div class="subject">
+      <div class="input-group">
         <label>Select Subject?</label>
         <div class="radio-group">
           <label><input type="radio" name="subject" checked> General Inquiry</label>
@@ -88,13 +85,37 @@
         </div>
       </div>
 
-      <div class="message">
+      <div class="input-group">
         <label>Message</label>
         <textarea placeholder="Write your message.."></textarea>
       </div>
 
-      <button type="submit" class="send-btn">Send Message</button>
+      <div class="button-container">
+        <button type="submit" class="send-btn" >Send Message</button>
+      </div>
     </form>
+  </div>
+</section>
+
+<section class="contact-options">
+  <div class="contact-card">
+    <img src="email-icon.png" alt="Email Icon" class="contact-icon">
+    <h3>Email</h3>
+    <p>For any inquiries or assistance, feel free to contact us via email. We are here to help with your questions.</p>
+  </div>
+
+  <div class="contact-card">
+    <img src="chat-icon.png" alt="Live Chat Icon" class="contact-icon">
+    <h3>Live Chat</h3>
+    <p>Connect with us through live chat for instant support and answers to your questions. We're here to help you!</p>
+    <a href="#" class="contact-link">Click Here &gt;</a>
+  </div>
+
+  <div class="contact-card">
+    <img src="phone-icon.png" alt="Phone Icon" class="contact-icon">
+    <h3>Phone</h3>
+    <p>Call us now for immediate assistance! Our team is ready to help you with any inquiries or support you need.</p>
+    <a href="tel:+94112224556" class="contact-link phone">+94112224556</a>
   </div>
 </section>
 
